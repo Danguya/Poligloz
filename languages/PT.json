@@ -1,0 +1,17 @@
+{
+    "en":{
+        "casa":"home",
+        "sobre":"about",
+        "livre":"free"
+    },
+    "es":{
+        "casa":"home",
+        "sobre":"acerca de",
+        "livre":"libre"
+    },
+    "fr":{
+        "casa":"domicile",
+        "sobre":"sur",
+        "livre":"gratuite"
+    }
+}

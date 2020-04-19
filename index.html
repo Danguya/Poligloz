@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul>
+            <li take class="item">sobre</li>
+            <li data-key="lts" class="item">casa</li>
+            <li data-key="lts" class="item">livre</li>
+            
+        </ul>
+        <script>
+            var ess;
+            const ul = document.querySelector('ul');
+            const itens = document.querySelectorAll("[take]")
+
+            function toTranslate(from='pt',to='en', jsonLanguage = './languages/en.json'){
+                jsonLanguage =  `./languages/${from}.json`;
+                fetch(jsonLanguage)
+                .then(function(response){
+                    return response.json();
+
+                }).then(function(obj){
+                    console.log(obj);
+                    ess = obj;
+                    for(var x=0;x<itens.length;x++){
+                        var texto = itens[x].innerHTML;
+                        itens[x].innerHTML = obj[to][texto];
+                    }
+                }).catch(function(error){
+                    console.log("erro");
+                    console.error(error);
+                })
+            }
+            toTranslate("pt","fr");
+            
+        </script>
+    </body>
+</html>
