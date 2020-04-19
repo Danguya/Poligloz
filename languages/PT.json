@@ -2,12 +2,24 @@
     "en":{
         "casa":"home",
         "sobre":"about",
-        "livre":"free"
+        "livre":"free",
+        "país":"Country",
+        "é":"is",
+        "um":"a",
+        "belo":"beautiful",
+        "e":"and",
+        "rico":"rich"
     },
     "es":{
         "casa":"home",
         "sobre":"acerca de",
-        "livre":"libre"
+        "livre":"libre",
+        "país":"pais",
+        "é":"es",
+        "um":"uno",
+        "belo":"hermosa",
+        "e":"y",
+        "rico":"rico"
     },
     "fr":{
         "casa":"domicile",

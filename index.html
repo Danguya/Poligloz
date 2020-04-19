@@ -8,7 +8,8 @@
     <body>
         <ul>
             <li take class="item">sobre</li>
-            <li data-key="lts" class="item">casa</li>
+            <li take data-key="lts" class="item">casa livre</li>
+            <li take data-key="lts" class="item">Angola é um país belo e rico</li>
             <li data-key="lts" class="item">livre</li>
             
         </ul>
@@ -26,16 +27,26 @@
                 }).then(function(obj){
                     console.log(obj);
                     ess = obj;
+                    var op;
                     for(var x=0;x<itens.length;x++){
-                        var texto = itens[x].innerHTML;
-                        itens[x].innerHTML = obj[to][texto];
+                        var texto = itens[x].innerHTML.split(' ');
+                        for(var i=0;i<texto.length;i++){
+                            //console.log(texto[i]);
+                            if(obj[to][texto[i]] !== undefined){
+                                op = (obj[to][texto[i]]);
+                                texto[i] = op;
+                                console.log(texto[i]);
+                            }
+                        }
+                        
+                        itens[x].innerHTML = texto.toString().split(',').join(' '); //obj[to][texto];
                     }
                 }).catch(function(error){
                     console.log("erro");
                     console.error(error);
                 })
             }
-            toTranslate("pt","fr");
+            toTranslate("pt","pt");
             
         </script>
     </body>

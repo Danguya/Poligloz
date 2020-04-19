@@ -3,7 +3,9 @@
     "pt":{
         "home":"casa",
         "about":"sobre",
-        "free":"livre"
+        "free":"livre",
+        "a":"um",
+        "country":"país"
     },
     "es":{
         "home":"casa",
