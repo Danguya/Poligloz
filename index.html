@@ -7,54 +7,18 @@
         <script src="./tradutor-api.js"></script>
     </head>
     <body>
-        <ul>
-            <li take class="item">sobre</li>
-            <li take data-key="lts" class="item">casa livre</li>
-            <li take data-key="lts" class="item">Angola é um país amante e Rico e Dragao</li>
-            <li data-key="lts" class="item">livre</li>
+        <p id="translate">Angola é um país amante e Rico e Dragao</p>
+        <script>
+            const p = document.getElementById("translate");
             
-        </ul>
-        <!-- <script>
-            function capitalize(s)
-            {
-                return s[0].toUpperCase() + s.slice(1);
-            }
-            function lower(s)
-            {
-                return s[0].toLowerCase() + s.slice(1);
-            }
-            var ess;
-            const ul = document.querySelector('ul');
-            const itens = document.querySelectorAll("[take]")
-
-            function toTranslate(from='pt',to='en', jsonLanguage = './languages/en.json'){
-                jsonLanguage =  `./languages/${from}.json`;
-                fetch(jsonLanguage)
-                .then(function(response){
-                    return response.json();
-
-                }).then(function(obj){
-                    //console.log(obj);
-                    ess = obj;
-                    var op;
-                    for(var x=0;x<itens.length;x++){
-                        var texto = itens[x].innerHTML.split(' ');
-                        for(var i=0;i<texto.length;i++){
-                            //console.log(texto[i]);
-                          // if(obj[to][texto[i]] !== undefined){
-                            texto[i] = obj[to][texto[i]] === undefined ? obj[to][capitalize(texto[i])] || obj[to][lower(texto[i])] || texto[i] : obj[to][texto[i]];
-                           //}
-                        }
-                        
-                        itens[x].innerHTML = texto.toString().split(',').join(' '); //obj[to][texto];
-                    }
-                }).catch(function(error){
-                    console.log("erro");
-                    console.error(error);
-                })
-            }
-            toTranslate("pt","en");
             
-        </script> -->
+            
+            document.addEventListener('click',function(){
+                p.innerHTML = toTranslate('pt','en',p.innerText);
+                alert(toTranslate('en','pt',"Angola is a Country lover and rich and Dragao"))
+            })
+        </script>
+        
+
     </body>
 </html>
