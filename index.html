@@ -11,11 +11,18 @@
         <script>
             const p = document.getElementById("translate");
             
-            
-            
-            document.addEventListener('click',function(){
-                p.innerHTML = toTranslate('pt','en',p.innerText);
-                alert(toTranslate('en','pt',"Angola is a Country lover and rich and Dragao"))
+            document.addEventListener('DOMContentLoaded',function(){
+                var tempo = setInterval(function(){
+                toTranslate('pt','en',p.innerText);
+                if(translated.ready === true){
+                   
+                    p.innerHTML = translated.body;
+                }
+                if(p.innerHTML === translated.body){
+                    clearInterval(tempo);
+                }
+            },1000);
+
             })
         </script>
         

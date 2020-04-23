@@ -49,20 +49,30 @@ function toReplaceWord(data,text, language){
     newText = toConvertTexArrayInString(replacedWord);
     return newText;
 }
+let translated = {
+    body: "",
+    ready: false
+}
 
 function toTranslate(fromLanguage, finalLanguage, text){
     var FileDictionaryLocation =   `./languages/${fromLanguage}.json`;
     text = toConvertTextInArrayWords(text);
     fetch(FileDictionaryLocation)
         .then(function(response){
+            m ="carregando";
             return response.json();
+            console.log(m);
         })
         .then(function(data){
-            console.log(data);
             console.log(toReplaceWord(data, text, finalLanguage));
+            if(toReplaceWord(data, text, finalLanguage) !== undefined){
+                translated.body = toReplaceWord(data, text, finalLanguage);
+                translated.ready = true;
+            }
             
         })
         .catch(function(error){
             console.error(error);
         });
+        
 }
