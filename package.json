@@ -1,0 +1,23 @@
+{
+  "name": "poligloz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danguya/Poligloz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danguya/Poligloz/issues"
+  },
+  "homepage": "https://github.com/Danguya/Poligloz#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
