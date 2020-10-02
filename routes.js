@@ -4,7 +4,7 @@ const tradutor      = require('./tradutor-api');
 
 routes.get('/',(request, response)=>{
     response.send({
-        'message':'poligloz'
+        'message':'2 '+tradutor.toTranslate('EN','pt','This is Angola')
     });    
 });
 

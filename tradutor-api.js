@@ -4,19 +4,19 @@
  * date: 21/04/2020 21:16min
  * version:1.0
  */
-
-
-
-function toCapitalizeFirstLetter(word, state = true)
+function toCapitalizeText(text)
 {
-    var capitalizedFirstLetter;
-    if(state === true){
-        capitalizedFirstLetter = word[0].toUpperCase() + word.slice(1);
-    }else if(state === false){
-        capitalizedFirstLetter = word[0].toLowerCase() + word.slice(1);
-
+    if(text.match(/[a-z]/ig).length >= 1){
+        text = text.toUpperCase();
     }
-    return capitalizedFirstLetter;
+    if(text.match(/[A-Z]/ig).length >= 1){
+        text = text.toUpperCase();
+    }
+    if(text.match(/[a-zA-Z]+/ig).length >= 1){
+        text = text.toLowerCase();
+    }
+    return text;
+
 }
 
 function toConvertTextInArrayWords(text){
@@ -30,49 +30,33 @@ function toConvertTexArrayInString(textArray = []){
 }
 
 
-function toReplaceWord(data,text, language){
+function toReplaceWord(data, toLanguage, text){
+    var toReplace = data[toLanguage];
     var replacedWord = [];
-    var newText = "";
+    var finalString;
+
+    text = toCapitalizeText(text);
+    text = text.split(' ');
+    
     for(var i = 0; i < text.length; i++){
-
-        if(data[language][toCapitalizeFirstLetter(text[i],true)] === undefined){
-            replacedWord[i] = data[language][toCapitalizeFirstLetter(text[i],true)];
-        }
-        if(data[language][toCapitalizeFirstLetter(text[i],false)] !== undefined){
-            replacedWord[i] = data[language][toCapitalizeFirstLetter(text[i],false)];
-        }else{
+        if(toReplace[text[i]] === undefined){
             replacedWord[i] = text[i];
+        }else{
+            replacedWord[i] = toReplace[text[i]];
         }
-
-    }
-    console.log(typeof replacedWord);
-    newText = toConvertTexArrayInString(replacedWord);
-    return newText;
-}
-let translated = {
-    body: "",
-    ready: false
-}
-
-function toTranslate(fromLanguage, finalLanguage, text){
-    var FileDictionaryLocation =   `./languages/${fromLanguage}.json`;
-    text = toConvertTextInArrayWords(text);
-    fetch(FileDictionaryLocation)
-        .then(function(response){
-            m ="carregando";
-            return response.json();
-            console.log(m);
-        })
-        .then(function(data){
-            console.log(toReplaceWord(data, text, finalLanguage));
-            if(toReplaceWord(data, text, finalLanguage) !== undefined){
-                translated.body = toReplaceWord(data, text, finalLanguage);
-                translated.ready = true;
-            }
-            
-        })
-        .catch(function(error){
-            console.error(error);
-        });
         
+
+        finalString = toConvertTexArrayInString(replacedWord);
+    }
+
+    return finalString;
+}
+
+module.exports = {
+    toTranslate(fromLanguage, toLanguage, textToTranslate){
+        var dictionaryLanguage = require(`./languages/${fromLanguage}.json`);
+        var translatedText = toReplaceWord(dictionaryLanguage,toLanguage, textToTranslate);
+
+        return translatedText;
+    }
 }

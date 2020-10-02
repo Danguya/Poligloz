@@ -5,6 +5,7 @@
         "about":"sobre",
         "free":"livre",
         "a":"um",
+        "this":"isto",
         "country":"país",
         "friedn": "Amigo",
         "frinedship": "Amizade",
@@ -44,7 +45,8 @@
         "Glass": "Copo",
         "Continent": "Continente",
         "Dragon": "Dragao",
-        "Leave": "Deixa "
+        "Leave": "Deixa ",
+        "is":"é"
     },
     "es":{
         "home":"casa",
