@@ -54,7 +54,8 @@ function toReplaceWord(data, toLanguage, text){
 
 module.exports = {
     toTranslate(fromLanguage, toLanguage, textToTranslate){
-        var dictionaryLanguage = require(`./languages/${fromLanguage}.json`);
+
+        var dictionaryLanguage = require(`./src/languages/${fromLanguage}.json`);
         var translatedText = toReplaceWord(dictionaryLanguage,toLanguage, textToTranslate);
 
         return translatedText;

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Danguya/Poligloz#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.10.9",
     "node-fetch": "^2.6.1"
   }
 }
