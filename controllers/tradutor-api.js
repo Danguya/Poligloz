@@ -37,14 +37,13 @@ function toReplaceWord(data, toLanguage, text){
 
     text = toCapitalizeText(text);
     text = text.split(' ');
-    
+
     for(var i = 0; i < text.length; i++){
         if(toReplace[text[i]] === undefined){
             replacedWord[i] = text[i];
         }else{
             replacedWord[i] = toReplace[text[i]];
         }
-        
 
         finalString = toConvertTexArrayInString(replacedWord);
     }
@@ -54,9 +53,8 @@ function toReplaceWord(data, toLanguage, text){
 
 module.exports = {
     toTranslate(fromLanguage, toLanguage, textToTranslate){
-
-        var dictionaryLanguage = require(`./src/languages/${fromLanguage}.json`);
-        var translatedText = toReplaceWord(dictionaryLanguage,toLanguage, textToTranslate);
+        const dictionaryLanguage = require(`../services/languages/${fromLanguage}.json`);
+        const translatedText = toReplaceWord(dictionaryLanguage, toLanguage, textToTranslate);
 
         return translatedText;
     }
