@@ -1,29 +1,36 @@
 {
   "name": "poligloz",
   "version": "1.0.0",
-  "description": "",
+  "description": "Poligloz is a library dedicated to translating text content from different languages.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Danguya/Poligloz.git"
   },
-  "keywords": [],
+  "keywords": [
+    "Poligloz",
+    "Translator",
+    "Library",
+    "Translate text",
+    "Tradutor",
+    "Biblioteca"
+  ],
   "author": "Wilmy Danguya",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Danguya/Poligloz/issues"
   },
   "homepage": "https://github.com/Danguya/Poligloz#readme",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.10.9",
-    "node-fetch": "^2.6.1"
+  
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
