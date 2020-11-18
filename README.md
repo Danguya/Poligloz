@@ -9,35 +9,6 @@ que seja possível traduzir com ela legendas de filmes, transmissões ao vivo, s
 em php, react, react native, flutter, java, c, e etc.
 Este é um bom e grande projeto OPEN-SOURCE sem quaisquer fins lucrativos.
 
-
-## 🚀 Tecnologias usadas
-Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
-
-- [Node.js](https://nodejs.org/en/)
-- [body-parser](https://www.npmjs.com/package/body-parser)
-- [Express](https://expressjs.com/pt-br/)
-- [Nodemon](https://www.npmjs.com/package/nodemon)
-- [dotenv](https://www.npmjs.com/package/dotenv)
-- [mongoose](https://www.npmjs.com/package/mongoose)
-- [node-fetch](https://www.npmjs.com/package/@hapi/joi)
-
-## 🐱‍👤 Como rodar?
-
-- Clone este projecto no seu directório
-- Rode no seu terminal na pasta do projecto `npm install` ou `yarn add .`
-- A seguir execute `yarn dev` ou `npm run dev`
-- No seu navegador acesse a rota: `localhost:3333/`, irá lhe retornar uma mensagem do tipo: {"message":"isto é angola"}
-- Você pode testar também o endpoint de tradução, acessando: `localhost:3333/translate/:fromLanguage/:toLanguage/:content`. Onde:
-1. fromLanguage: é a língua original do texto;
-2. toLanguage: é a língua que pretendes traduzir o texto;
-3. content: é o texto que pretendes traduzir;
-
-##### Exemplo
-
-Requisição: `localhost:3333/translate/EN/pt/home`;
-Resposta: {"message": "casa"}
-
-
 ## 🤼‍♂️ Como contribuir?
 
 - Fork esse repositório;
