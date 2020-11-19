@@ -1,67 +1,58 @@
 # POLIGLOZ
 
 
-Já imaginou se existisse uma API que te permitesse traduzir qualquer frase e de qualquer idioma ou até mesmo dialetos em suas
-aplicações de qualquer tipo de plataformas como web, desktop, mobile e qualquer sistema operacional.
-Existe a API do google que pelos vistos é muito fechado e só permite traduzir as aplicações do google.
-Por isso surgiu o Poligloz uma API que vai permitir estas todas atividades mencionadas a cima, e espero
-que seja possível traduzir com ela legendas de filmes, transmissões ao vivo, sites, aplicativos construidos
-em php, react, react native, flutter, java, c, e etc.
-Este é um bom e grande projeto OPEN-SOURCE sem quaisquer fins lucrativos.
+Have you ever wondered if there is an API that allows you to translate any sentence and any language or even dialects into your
+applications of any type of platform such as web, desktop, mobile and any operating system.
+There is a google API that apparently is very closed and only allows to translate as google applications.
+That's why Poligloz came up with an API that will allow these activities mentioned above, and I hope
+that it is possible to translate film subtitles, live streams, websites, applications built with it
+in php, react, react native, flutter, java, c, and etc.
+This is a good and great OPEN-SOURCE project without any profit.
 
 
-## 🚀 Tecnologias usadas
-Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
+## HOW TO INSTALL?
 
-- [Node.js](https://nodejs.org/en/)
-- [body-parser](https://www.npmjs.com/package/body-parser)
-- [Express](https://expressjs.com/pt-br/)
-- [Nodemon](https://www.npmjs.com/package/nodemon)
-- [dotenv](https://www.npmjs.com/package/dotenv)
-- [mongoose](https://www.npmjs.com/package/mongoose)
-- [node-fetch](https://www.npmjs.com/package/@hapi/joi)
+In your terminal, execute this command to download poligloz by npm
 
-## 🐱‍👤 Como rodar?
+$ npm install express
 
-- Clone este projecto no seu directório
-- Rode no seu terminal na pasta do projecto `npm install` ou `yarn add .`
-- A seguir execute `yarn dev` ou `npm run dev`
-- No seu navegador acesse a rota: `localhost:3333/`, irá lhe retornar uma mensagem do tipo: {"message":"isto é angola"}
-- Você pode testar também o endpoint de tradução, acessando: `localhost:3333/translate/:fromLanguage/:toLanguage/:content`. Onde:
-1. fromLanguage: é a língua original do texto;
-2. toLanguage: é a língua que pretendes traduzir o texto;
-3. content: é o texto que pretendes traduzir;
+##### Example
 
-##### Exemplo
+```javascript
 
-Requisição: `localhost:3333/translate/EN/pt/home`;
-Resposta: {"message": "casa"}
+const {Poligloz} = require('../../index');
 
+var myContent = "isto é angola";
 
-## 🤼‍♂️ Como contribuir?
+var translated = Poligloz('en','pt',myContent);
 
-- Fork esse repositório;
-- Crie uma branch com a sua feature: git checkout -b my-feature
-- Commit suas mudanças: git commit -m 'feat: My new feature'
-- Push a sua branch: git push origin my-feature
-- Deixe um star neste repositório
+console.log(translated);
+```
 
-## Contribuindo
-Estamos abertos e gratos por quaisquer contribuições feitas pela comunidade. Ao contribuir para o Poligloz, você concorda em cumprir o código de [conduta](https://github.com/Danguya/Poligloz/blob/master/CODE_OF_CONDUCT.md).
+## How to contribute
 
-## Estilo de codificar
-Por favor, siga o guia de estilo de [estilo de codificar da comunidade NodeJS](https://github.com/felixge/node-style-guide) 
+- Fork that repository;
+- Create a branch with your feature: git checkout -b my-feature
+- Commit your changes: git commit -m 'feat: My new feature'
+- Push your branch: git push origin my-feature
+- Leave a star in this repository
 
-## Enviar Commits
-As mensagens de Commits devem ser baseadas em verbos, usando o seguinte padrão:
+## Contributing
+We are open and grateful for any contributions made by the community. By contributing to Poligloz, you agree to comply with the code of conduct [conduta](https://github.com/Danguya/Poligloz/blob/master/CODE_OF_CONDUCT.md).
+
+## Coding
+Please follow the [NodeJS community coding style] style guide] (https://github.com/felixge/node-style-guide) 
+
+## Submit Commits
+Commits messages must be based on verbs, using the following pattern:
 
 - Fixing ...
 - Adding ...
 - Updating ...
 - Removing ...
 
-## 📝 Licença
-Esse projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+## 📝 License
+This project is under the MIT license. See the LICENSE file for more details.
 
 
-Feito com ❤️ Wilmy Danguya 👋
+Made with ❤️ Wilmy Danguya 👋

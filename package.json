@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Poligloz is a library dedicated to translating text content from different languages.",
   "main": "index.js",
-  "scripts": {
-
-  },
+  "contributors": [
+    "Martins Gouveia"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Danguya/Poligloz.git"
@@ -24,12 +24,6 @@
     "url": "https://github.com/Danguya/Poligloz/issues"
   },
   "homepage": "https://github.com/Danguya/Poligloz#readme",
-  "dependencies": {
-  
-  },
-  "devDependencies": {
-    
-  },
   "directories": {
     "lib": "lib"
   }
