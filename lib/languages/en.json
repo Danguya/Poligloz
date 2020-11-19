@@ -45,7 +45,30 @@
         "Continent": "Continente",
         "Dragon": "Dragao",
         "Leave": "Deixa ",
-        "is":"é"
+        "is":"é",
+        "you":"você",
+        "can’t":"não pode",
+        "connect":"conectar",
+        "the":"os",
+        "dots":"pontos",
+        "looking":"olhando",
+        "forward":"frente",
+        "backward":"para trás",
+        "can":"pode",
+        "only": "somente",
+        "them":"eles",
+        "so":"então",
+        "have":"tem",
+        "totrust":"confiar",
+        "your":"seu",
+        "future":"futuro",
+        "in":"no",
+        "will":"vai",    
+        "somehow":"de alguma forma",
+        "that":"que"
+
+
+
     },
     "es":{
         "home":"casa",
