@@ -1,6 +1,6 @@
 {
   "name": "poligloz",
-  "version": " v1.0-beta.2",
+  "version": "v1.0-beta.2",
   "description": "Poligloz is a library dedicated to translating text content from different languages.",
   "main": "index.js",
   "contributors": [
