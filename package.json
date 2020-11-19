@@ -27,5 +27,5 @@
   "directories": {
     "lib": "lib"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": { "registry": "https://npm.pkg.github.com/danguya/poligloz" }
 }
