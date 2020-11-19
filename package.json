@@ -26,5 +26,6 @@
   "homepage": "https://github.com/Danguya/Poligloz#readme",
   "directories": {
     "lib": "lib"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
