@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Danguya/Poligloz.git"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "keywords": [
     "Poligloz",
     "Translator",
